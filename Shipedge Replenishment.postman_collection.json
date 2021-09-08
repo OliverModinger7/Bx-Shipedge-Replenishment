@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "4b9b2b14-593e-4f5e-9951-0013df57daa4",
+		"name": "Shipedge Replenishment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "get_reple",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "X-UID",
+						"value": "35",
+						"type": "text"
+					},
+					{
+						"key": "X-KEY",
+						"value": "7c1277b835a0fc4873b90174afd1e132",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://gammaintegration.shipedge.com/API/Rest/v3/Replenishment/get_reple/744/bx1",
+					"protocol": "http",
+					"host": [
+						"gammaintegration",
+						"shipedge",
+						"com"
+					],
+					"path": [
+						"API",
+						"Rest",
+						"v3",
+						"Replenishment",
+						"get_reple",
+						"744",
+						"bx1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "create_reple",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {}
+			},
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-UID",
+						"value": "35",
+						"type": "text"
+					},
+					{
+						"key": "X-KEY",
+						"value": "7c1277b835a0fc4873b90174afd1e132",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"data\" : {\r\n    \"warehouse\": \"bx1\",\r\n    \"supplier_name\": \"PruebaBX1\",\r\n    \"po_num\": \"1002\",\r\n    \"tracking_num\": \"20210609\",\r\n    \"comments\": \"comments\",\r\n    \"expected_delivery_date\": \"2021-09-09\",\r\n    \"pre_sync\": \"on\",\r\n    \"items\": [\r\n      {\r\n        \"sku\": \"20210903\", \r\n        \"qty\": \"2\", \r\n        \"description\" : \"descripicion\",\r\n        \"lot\": \"lot5\",\r\n        \"lpn\": \"lpn20\", \r\n        \"expir\":\"2021-10-10\", \r\n        \"uom\":\"uom5\"\r\n      },\r\n      {\r\n          \"sku\": \"20210909\", \r\n          \"qty\": \"5\"\r\n      }\r\n    ]\r\n  }\r\n}"
+				},
+				"url": {
+					"raw": "http://gammaintegration.shipedge.com/API/Rest/v3/Replenishment/create_reple",
+					"protocol": "http",
+					"host": [
+						"gammaintegration",
+						"shipedge",
+						"com"
+					],
+					"path": [
+						"API",
+						"Rest",
+						"v3",
+						"Replenishment",
+						"create_reple"
+					],
+					"query": [
+						{
+							"key": "X-UID",
+							"value": "35",
+							"disabled": true
+						},
+						{
+							"key": "X-TIMESTAMP",
+							"value": "2021090310",
+							"disabled": true
+						},
+						{
+							"key": "X-HASH",
+							"value": "5968448CF8E9B0EA5C9C5391F6F0AF2AEA587D4F",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
