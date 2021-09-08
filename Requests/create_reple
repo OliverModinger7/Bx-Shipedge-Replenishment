@@ -1,0 +1,77 @@
+Este request nos servirá para crear un replenishment
+
+Metodo: POST
+URL: http://gammaintegration.shipedge.com/API/Rest/v3/Replenishment/create_reple
+
+Parametros.
+Headers.
+X-UID: 35
+X-KEY: 7c1277b835a0fc4873b90174afd1e132
+
+Body.
+Key (es siempre la misma) = 7c1277b835a0fc4873b90174afd1e132
+Warehouse = bx1
+account_id = 35
+
+----------------REQUEST----------------------
+{
+  "data" : {
+    "warehouse": "bx1",
+    "supplier_name": "PruebaBlue1",
+    "po_num": "555",
+    "tracking_num": "7060504030",
+    "comments": "comments",
+    "expected_delivery_date": "2021-09-09",
+    "pre_sync": "on",
+    "items": [
+      {
+        "sku": "20210903", 
+        "qty": "2", 
+        "description" : "descripicion",
+        "lot": "lot5",
+        "lpn": "lpn20", 
+        "expir":"2021-10-10", 
+        "uom":"uom5"
+      },
+      {
+          "sku": "20210909", 
+          "qty": "5"
+      }
+    ]
+  }
+}
+
+
+--------------RESPUESTA------------------
+
+{
+    "success": true,
+    "reple_id": 772,
+    "data": {
+        "data": {
+            "warehouse": "bx1",
+            "supplier_name": "PruebaBlue1",
+            "po_num": "555",
+            "tracking_num": "7060504030",
+            "comments": "comments",
+            "expected_delivery_date": "2021-09-09",
+            "pre_sync": "on",
+            "items": [
+                {
+                    "sku": "20210903",
+                    "qty": "2",
+                    "description": "descripicion",
+                    "lot": "lot5",
+                    "lpn": "lpn20",
+                    "expir": "2021-10-10",
+                    "uom": "uom5"
+                },
+                {
+                    "sku": "20210909",
+                    "qty": "5"
+                }
+            ]
+        }
+    }
+}
+
