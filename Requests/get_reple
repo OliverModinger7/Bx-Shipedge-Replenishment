@@ -1,0 +1,36 @@
+Este request nos servirá para traer los datos de un replenishment
+
+Metodo: GET
+URL: http://gammaintegration.shipedge.com/API/Rest/v3/Replenishment/get_reple/{reple_id}/bx1
+
+Parametros.
+Headers.
+X-UID: 35
+X-KEY: 7c1277b835a0fc4873b90174afd1e132
+
+Body.
+Key (es siempre la misma) = 7c1277b835a0fc4873b90174afd1e132
+Warehouse = bx1
+account_id = 35
+reple_id = es el id del replenishment
+
+
+----------------GET----------------------
+GET http://gammaintegration.shipedge.com/API/Rest/v3/Replenishment/get_reple/744/bx1
+
+--------------RESPUESTA------------------
+
+{
+    "success": true,
+    "data": {
+        "reple_id": 744,
+        "po_num": "123",
+        "status": "intransit",
+        "tracking_num": "456",
+        "supplier_name": "TestBX",
+        "comments": "Hello",
+        "expected_delivery_date": "2021-09-09",
+        "pre_sync": "On",
+        "items": []
+    }
+}
